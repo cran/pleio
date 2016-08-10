@@ -1,0 +1,6 @@
+import(Matrix)
+importFrom("stats", "lm", "pchisq", "var")
+importFrom("utils", "combn")
+export(pleio.q.fit, pleio.q.sequential, pleio.q.test)
+
+##exportPattern("^[[:alpha:]]+")

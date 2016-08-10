@@ -1,0 +1,16 @@
+a98050abd44f77004d7b62a5f0b49d37 *DESCRIPTION
+ac176dc2bd24ebbe3c35258ae1375cdd *NAMESPACE
+c4f602985675ff60762b11346bc093da *R/center.R
+3c709ca9215fb6da81a69e8d88572447 *R/pleio.q.fit.R
+ca8f1b280a72e54b7ddf44ac06d154f2 *R/pleio.q.sequential.R
+2bdc9faf36aacb0f6ce3e61201094b8f *R/pleio.q.test.R
+54b6a603126aaa8e2ef35e0b2032dd56 *build/vignette.rds
+81162179647bcf6ac928f165593ce553 *data/pleio.qsim.RData
+c50aa542a93d2a3cd35720ae31974d95 *inst/doc/pleioQ.pdf
+69f2b6594bb1eda10626ca731b067248 *inst/doc/pleioQ.pdf.asis
+3ff0e5c51c95ea836a0314be0fdda8f9 *man/pleio.q.fit.Rd
+f300e6b162bec733fad1378bc55ed25c *man/pleio.q.sequential.Rd
+465daa5fdaede7c01bac778151f44820 *man/pleio.q.test.Rd
+06e65220bb9595e205fb47f88d6d60e5 *man/pleio.qsim.Rd
+21c86f10d462980e78646e1707a077fb *vignettes/pleioQ.Rmd
+69f2b6594bb1eda10626ca731b067248 *vignettes/pleioQ.pdf.asis
