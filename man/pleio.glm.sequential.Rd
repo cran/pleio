@@ -1,22 +1,21 @@
-\name{pleio.q.sequential}
-\alias{pleio.q.sequential}
+\name{pleio.glm.sequential}
+\alias{pleio.glm.sequential}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Perform sequential tests of pleiotropy
 }
 \description{
   Perform sequential tests of pleiotropy to determine the number of
-  traits, and which traits, are associatd with a vector of
-  genotypes. For gaussian traits without covariates.
+  traits, and which traits, are associatd with a vector of genotypes.
 }
 \usage{
-pleio.q.sequential(obj.fit, pval.threshold)
+pleio.glm.sequential(obj.pleio.glm.fit, pval.threshold)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{obj.fit}{ result of pleio.q.fit }
+  \item{obj.pleio.glm.fit}{ result of pleio.glm.fit }
   \item{pval.threshold}{p-value for rejecting the null hypothesis of the
-    specified number of non-zero betas.
+    specified number of coefficients constrained to be zero.
 }
 }
 \details{
@@ -41,23 +40,34 @@ pleio.q.sequential(obj.fit, pval.threshold)
 %%  ~Describe the value returned
 A list containing:
 \item{pval }{p-value of the final test from the sequential testing}
-\item{index.beta}{index of columns of y that have non-zero betas.
+\item{count}{the number of nonzero coefficients}
+\item{index.nonzero.coef}{index of column(s) of y that have non-zero coefficients.
   These indices indicate which traits are associated with the genotype,
   accounting for the correlations among the traits.}
 }
 \references{
-  %% ~put references to the literature/web site here ~
-   Schaid DJ, Tong X, Larrabee B, Kennedy RB, Poland GA, Sinnwell JP.
-  Statistical Methods for Testing Genetic Pleiotropy. To appear in Genetics, 2016.
+  Schaid DJ, Tong X, Larrabee B, Kennedy RB, Poland GA, Sinnwell JP.
+  Statistical Methods for Testing Genetic Pleiotropy. Genetics. 2016
+  Oct;204(2):483-497. 
+
+  Schaid DJ, Tong X, Batzler A, Sinnwell JP, Qing J, Biernacka
+  JM. Multivariate Generalized Linear Model for Genetic
+  Pleiotropy. Under review. 
 }
 \author{
   %%  ~~who you are~~
   Dan Schaid and Jason Sinnwell
 }
 \examples{
-data(pleio.qdemo)
-fit <- pleio.q.fit(y, geno)
-test.seq <- pleio.q.sequential(fit, pval.threshold=.05)
-test.seq
+data(pleio.demo)
+
+## test without covars
+fams <- c("gaussian","binomial","ordinal")
+obj <- pleio.glm.fit(y, geno, glm.family=fams)
+stat <- pleio.glm.test(obj, count.nonzero.coef = 0)
+stat$stat
+stat$pval
+pseq <- pleio.glm.sequential(obj, pval.threshold=.5)
+pseq
 }
 

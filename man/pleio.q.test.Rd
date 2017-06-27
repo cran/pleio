@@ -2,7 +2,7 @@
 \alias{pleio.q.test}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Single tests of the number of traits associated with genotype
+Single test of the number of traits associated with genotype
 }
 \description{
   Perform single test of the number of traits associated with a
@@ -35,30 +35,32 @@ A list containing:
   \item{stat }{global test statistict}
   \item{df}{degrees of freedom of the statistic}
   \item{pval}{p-value for the test}
-  \item{index.nonzero.beta}{index of the non-zero beta(s) that provide
+  \item{index.nonzero.beta}{index of the non-zero beta(s) that provide(s)
     the minimum tk goodness of fit statistic - this configuration is
     assumed to have beta's for all other indices equal to zero.}
   \item{tests}{data.frame containing the tests performed.
-    For m traits, and $k=count.nonzero.beta$, there are
+    For m traits, and k = count.nonzero.beta, there are
     m-choose-k tests considered in the null hypothesis. The data.frame
-    provides the indices of the unconstrained beta's and the
+    provides the indices of the unconstrained betas and the
     corresponding tk test statistic for the configuration.}
 }
 \references{
   %% ~put references to the literature/web site here ~
   Schaid DJ, Tong X, Larrabee B, Kennedy RB, Poland GA, Sinnwell JP.
-  Statistical Methods for Testing Genetic Pleiotropy. To appear in Genetics, 2016.}
+  Statistical Methods for Testing Genetic Pleiotropy. Genetics. 2016
+  Oct;204(2):483-497.
+}
 \author{
   %%  ~~who you are~~
   Dan Schaid and Jason Sinnwell
 }
 \examples{
-data(pleio.qsim)
+data(pleio.qdemo)
 fit <- pleio.q.fit(y, geno)
-## usual multivariate test of whether all beta's = 0
+## usual multivariate test of whether all betas = 0
 test0 <- pleio.q.test(fit, count.nonzero.beta = 0)
 test0
-## test whether allowing 2 beta's to be non-zero fits data
+## test whether allowing 2 betas to be non-zero fits data
 test2 <- pleio.q.test(fit, count.nonzero.beta = 2)
 test2
 }

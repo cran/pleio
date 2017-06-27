@@ -7,7 +7,9 @@ Compute Intermediate Statisics for Testing Pleiotropy
 \description{
   %%  ~~ A concise (1-5 lines) description of what the function does. ~~
   Pre-compute statisics for testing pleiotropy, to be used in
-  pleio.q.test and pleio.q.sequential 
+  pleio.q.test and pleio.q.sequential. This is an earlier function for
+  gaussian traits without covariates. The function pleio.glm.fit is more
+  general, allowing for gaussian traits, and possibly adjusting covariates. 
 }
 \usage{
 pleio.q.fit(y, geno)
@@ -17,7 +19,8 @@ pleio.q.fit(y, geno)
   \item{y}{ matrix of multiple quantitative traits to test for
     pleiotropy on genotype vector. Rows are for subjects and columns are for traits.
 }
-  \item{geno}{vector of genotypes coded as dosage of a minor allele, 0,1,2.
+  \item{geno}{vector of genotypes coded as dosage of a minor allele,
+    0,1,2. Allows imputed genotype dosage.
 }
 }
 \details{
@@ -40,7 +43,8 @@ A list containing
 \references{
   %% ~put references to the literature/web site here ~
   Schaid DJ, Tong X, Larrabee B, Kennedy RB, Poland GA, Sinnwell JP.
-  Statistical Methods for Testing Genetic Pleiotropy. To appear in Genetics, 2016.
+  Statistical Methods for Testing Genetic Pleiotropy. Genetics. 2016
+  Oct;204(2):483-497. 
 }
 \author{
   Dan Schaid, Jason Sinnwell.

@@ -11,10 +11,16 @@ pleio.q.fit <- function(y, geno){
   nonmiss <- nonmiss.y & nonmiss.geno
   y <- y[nonmiss,]
   geno <- geno[nonmiss]
-  
+
+  ## if no variance in geno, method will fail
+  if(length(unique(geno))<=1) {    
+    warning("geno has all the same genotypes")
+    return(list(x=NA, xx.inv = NA,
+                  beta.ols = NA,
+                  n.traits = ncol(y)))
+  }
   n.subj <- nrow(y)
   n.traits <- ncol(y)
-
   
   ## center y and geno
   y <- center(y)

@@ -4,6 +4,9 @@
 ## Date: 7/27/2016
 
 pleio.q.test <- function(obj.fit, count.nonzero.beta = 0){
+  if(all(is.na(obj.fit$x))) {
+     return(list(stat=NA, pval=NA, df=NA, index.nonzero.beta=NA, tests=NA))
+  }
   x <- obj.fit$x
   xx.inv <- obj.fit$xx.inv
   beta.ols <- obj.fit$beta.ols

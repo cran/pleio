@@ -5,7 +5,11 @@
 pleio.q.sequential <- function(obj.fit, pval.threshold){
   pval <- pval.threshold / 2
   n.traits <- obj.fit$n.traits
- 
+
+  if(all(is.na(obj.fit$x))) {
+    return(list(pval=NA, index.beta=NA))
+  }
+  
   count <- 0
   save <- NULL
   while(pval < pval.threshold & count < n.traits){
@@ -15,10 +19,17 @@ pleio.q.sequential <- function(obj.fit, pval.threshold){
     count <- count + 1
   }
 
-  ## decrement count to account for "+1" in above loop, in case
-  ## pval > pval.threshold when count === 0
-  
-  count <- count - 1
-  
+  ## if all traits significant, test is invalid,
+  ## return with all traits
+  if(count == n.traits & pval <= pval.threshold) {
+    index.beta <- 1:n.traits
+    pval=1.0
+  } else {
+    ## last trait added not signif, so 
+    ## decrement count to account for "+1" in above loop, in case
+    ## pval > pval.threshold when count === 0
+    count <- count - 1
+  }
+    
   return(list(pval=pval, index.beta=index.beta))
 }
