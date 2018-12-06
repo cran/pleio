@@ -1,13 +1,13 @@
-d1aacc7e485f44a9b7a46a50a14dc034 *DESCRIPTION
+36fc2d54bf6451d6163cca2051730273 *DESCRIPTION
 40619eb1f9554abf413fe40dab10b9e3 *NAMESPACE
 c4f602985675ff60762b11346bc093da *R/center.R
-b0f3ab500c80bc48e1d302f4c73c3dd0 *R/pleio.glm.fit.R
+72c1bbe998c54e10cb688e76ba870156 *R/pleio.glm.fit.R
 e0b5a1987d082b4551435b1226ba4e3d *R/pleio.glm.sequential.R
 87807be7576f41dc4ef9d1b2717cae61 *R/pleio.glm.test.R
 c9ee60745a4bf543908ef3217567d457 *R/pleio.q.fit.R
 f242473c4e00ec24b9e97da4210837bf *R/pleio.q.sequential.R
 6aae8de2c3feb23cdf327be8a62c0723 *R/pleio.q.test.R
-491705069000a9c0ab0064cf3d368563 *build/vignette.rds
+fcdbe955ba835f3fe859f7d38ba3e12d *build/vignette.rds
 5692de6faa3533b462307d51ae7a882d *data/pleio.demo.RData
 81162179647bcf6ac928f165593ce553 *data/pleio.qdemo.RData
 f4925144dc37c34f0aea28bbe53a063d *inst/doc/pleioGLM.pdf
@@ -22,7 +22,8 @@ e16a5cb127b9d1c087b80557c6d1de6c *man/pleio.q.fit.Rd
 5f47ffe4f5e776a79c05db117bb0e911 *man/pleio.q.sequential.Rd
 c4fa488a72a05282f281c2725f5d210c *man/pleio.q.test.Rd
 e80fcae91152746af498611252279f0c *man/pleio.qdemo.Rd
-09a2b68e00f19553e830c6efab3c460c *tests/test.pleio.glm.test.R
-2215df4655f2f5be071e50def1b8b53e *tests/test.pleio.glm.test.Rout.save
+b29aa2b0a1f5a6bb0609c336803c15ad *tests/test.pleio.glm.test.R
+9a613425150d1b9b03886588d34586c5 *tests/test.pleio.glm.test.Rout
+c0708c76e2282697c52b0620714a9ba8 *tests/test.pleio.glm.test.Rout.save
 fd913f9ebb68f79a2ef69456731b42cd *vignettes/pleioGLM.pdf.asis
 69f2b6594bb1eda10626ca731b067248 *vignettes/pleioQ.pdf.asis

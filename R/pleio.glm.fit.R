@@ -9,6 +9,9 @@ pleio.glm.fit  <- function(y, g, glm.family, x.all=NULL, x.index.list=NULL) {
   ## x.index.list is a vector of lists, where the ith vector item
   ##    (x.index.list[[i]]) is a vector of indices for which cols of x.all
   ##    are used as adjusting covariates for the ith trait in y.
+
+  ## convert y to matrix class
+  y <- as.matrix(y)
   
   ## use eps to avoid numerical problems with fitted values
   eps <- 1e-4
@@ -32,7 +35,7 @@ pleio.glm.fit  <- function(y, g, glm.family, x.all=NULL, x.index.list=NULL) {
     stop("length(g) != n.row.y")
   }
 
-  if(is.null(x.all) & !is.null(x.index.list)){
+  if(is.null(x.all) & !is.null(x.index.list)) {    
     stop("x.all  missing for x.index.list")
   }
   
@@ -43,9 +46,9 @@ pleio.glm.fit  <- function(y, g, glm.family, x.all=NULL, x.index.list=NULL) {
       x.index.list[[j]] <- NA
     }
   }
-  
+
   if(!is.null(x.all)){
-    
+    x.all <- as.matrix(x.all)
     if(is.null(x.index.list)){
       stop("list of X indices not definded")
     }

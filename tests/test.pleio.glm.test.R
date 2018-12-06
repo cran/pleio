@@ -8,7 +8,7 @@ devel=FALSE
 if(devel) {
   load("~/Projects/Pleiotropy/Build/pleioV2/data/pleio.demo.RData")
   library(rms)
-  rf <- list.files("~/Projects/Pleiotropy/Build/pleioV2/R", pattern="*.R", full.names=TRUE, include.dirs=TRUE)
+  rf <- list.files("../R", pattern="*.R", full.names=TRUE, include.dirs=TRUE)
   for(fi in rf) source(fi)
   
 } else {
@@ -72,3 +72,10 @@ plseq <- pleio.glm.sequential(obj, pval.threshold=.6)
 print(plseq)
 
 
+## used to give an error passing data.frame , but fixed to allow matrix and df 10/1/18
+xdf <- as.data.frame(x)
+ydf <- as.data.frame(y)
+objdf <- pleio.glm.fit(ydf, geno, glm.family=fams, x.all=xdf, x.index.list=index.cov)
+
+plseq <- pleio.glm.sequential(objdf, pval.threshold=.55)
+print(plseq)

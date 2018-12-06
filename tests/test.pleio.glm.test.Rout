@@ -178,4 +178,4 @@ $index.nonzero.coef
 > 
 > proc.time()
    user  system elapsed 
-  6.331   0.392   7.716 
+  5.997   0.207   6.919 
