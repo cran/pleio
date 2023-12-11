@@ -1,20 +1,8 @@
-## simulations to demo pleiotropy.glm
+## test script for pleio (pleiotropy R package)
 
-## needed for pleiotropy.glm.fit (for ordinal regression). Should this be
-## moved to pleitropy.glm.fit?
+require(pleio)
+data("pleio.demo")
 
-#library(rms)
-devel=FALSE
-if(devel) {
-  load("~/Projects/Pleiotropy/Build/pleioV2/data/pleio.demo.RData")
-  library(rms)
-  rf <- list.files("../R", pattern="*.R", full.names=TRUE, include.dirs=TRUE)
-  for(fi in rf) source(fi)
-  
-} else {
-  require(pleio)
-  data("pleio.demo")
-}
 
 ## test without covars
 fams <- c("gaussian","binomial","ordinal")
@@ -26,12 +14,10 @@ pleio.glm.sequential(obj, pval.threshold=.5)
 
 ## test with covars
 
-## save these as .RData objects for updated package
 
 ## length of index.cov must be the number of traits,
 ## no. cols of y
 
-#index.cov  <- vector(mode="list", length=3)
 index.cov <- list()
 ## cols 1 and 2 are covariates for trait 1, etc.
 index.cov[[1]] <- c(1:2)

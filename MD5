@@ -1,4 +1,4 @@
-36fc2d54bf6451d6163cca2051730273 *DESCRIPTION
+65101f710c87ec3e7bae1040217813a9 *DESCRIPTION
 40619eb1f9554abf413fe40dab10b9e3 *NAMESPACE
 c4f602985675ff60762b11346bc093da *R/center.R
 72c1bbe998c54e10cb688e76ba870156 *R/pleio.glm.fit.R
@@ -7,9 +7,12 @@ e0b5a1987d082b4551435b1226ba4e3d *R/pleio.glm.sequential.R
 c9ee60745a4bf543908ef3217567d457 *R/pleio.q.fit.R
 f242473c4e00ec24b9e97da4210837bf *R/pleio.q.sequential.R
 6aae8de2c3feb23cdf327be8a62c0723 *R/pleio.q.test.R
-fcdbe955ba835f3fe859f7d38ba3e12d *build/vignette.rds
+d35ad7e51e3dad5454c0348d090583c2 *README.md
+9729bc0c1bebea277b67b0a1cad89661 *build/vignette.rds
 5692de6faa3533b462307d51ae7a882d *data/pleio.demo.RData
 81162179647bcf6ac928f165593ce553 *data/pleio.qdemo.RData
+139edf9fceb625627de5a246cd5e9a1f *inst/LICENSE.mayo
+b984550464809325a968fc90a8d217d3 *inst/NEWS.Rd
 f4925144dc37c34f0aea28bbe53a063d *inst/doc/pleioGLM.pdf
 fd913f9ebb68f79a2ef69456731b42cd *inst/doc/pleioGLM.pdf.asis
 bf0df3fa6a2bc3ceba1404d786fb53b1 *inst/doc/pleioQ.pdf
@@ -22,8 +25,9 @@ e16a5cb127b9d1c087b80557c6d1de6c *man/pleio.q.fit.Rd
 5f47ffe4f5e776a79c05db117bb0e911 *man/pleio.q.sequential.Rd
 c4fa488a72a05282f281c2725f5d210c *man/pleio.q.test.Rd
 e80fcae91152746af498611252279f0c *man/pleio.qdemo.Rd
-b29aa2b0a1f5a6bb0609c336803c15ad *tests/test.pleio.glm.test.R
-9a613425150d1b9b03886588d34586c5 *tests/test.pleio.glm.test.Rout
-c0708c76e2282697c52b0620714a9ba8 *tests/test.pleio.glm.test.Rout.save
+ea1ac51c7177be16540702fe7dd4a7db *tests/test.pleio.glm.test.R
+24a613844df947cf33e7e4b54d316e1f *tests/test.pleio.glm.test.Rout.save
+07c76bea9101e98b51e89d34c97fc5b9 *vignettes/pleioGLM.Rmd
 fd913f9ebb68f79a2ef69456731b42cd *vignettes/pleioGLM.pdf.asis
+2c237f9024bb0ce9744ab9a1d65b07f4 *vignettes/pleioQ.Rmd
 69f2b6594bb1eda10626ca731b067248 *vignettes/pleioQ.pdf.asis
